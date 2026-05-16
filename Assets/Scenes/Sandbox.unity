@@ -901,6 +901,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8344315864155744864, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 464335799}
     - targetCorrespondingSourceObject: {fileID: 8344315865710370893, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 163848802}
@@ -950,7 +953,7 @@ PrefabInstance:
     - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 819822853}
     - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: areaLight
       value: 
@@ -966,7 +969,7 @@ PrefabInstance:
     - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: teleportTarget
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1402688415}
     - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: teleportTargetsArray.Array.size
       value: 2
@@ -1079,6 +1082,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8344315864155744864, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1402688419}
     - targetCorrespondingSourceObject: {fileID: 8344315865710370893, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 220644674}
@@ -2254,6 +2260,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4964012448688786, guid: 408f59ce148892a4480e8987e8a029b1, type: 3}
   m_PrefabInstance: {fileID: 432705851}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &464335794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8344315864155744864, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+  m_PrefabInstance: {fileID: 163848800}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &464335799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464335794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91523d33a2ee6414f9671d20c604e7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Teleport
+  teleportTarget: {fileID: 661255256}
+  player: {fileID: 819822853}
+  areaLight: {fileID: 0}
+  mainWorldLight: {fileID: 0}
+  cooldownTime: 3
 --- !u!1 &471462345
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,6 +2648,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1759573765007076311, guid: 3e83379d01c8e7843b2ef585ce04b4a8, type: 3}
   m_PrefabInstance: {fileID: 1306015077251435431}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &661255256 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8344315865539524999, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+  m_PrefabInstance: {fileID: 163848800}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &692732555
 PrefabInstance:
@@ -4060,21 +4093,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.93
+      value: -3.83
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.24
+      value: 3.24
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.15
+      value: 6.005
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4172,6 +4209,11 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &1386073276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8344315864155744864, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+  m_PrefabInstance: {fileID: 220644671}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1400278589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4250,6 +4292,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8344315864155744877, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
   m_PrefabInstance: {fileID: 220644671}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1402688419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386073276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91523d33a2ee6414f9671d20c604e7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Teleport
+  teleportTarget: {fileID: 2064587898}
+  player: {fileID: 819822853}
+  areaLight: {fileID: 0}
+  mainWorldLight: {fileID: 0}
+  cooldownTime: 3
 --- !u!1 &1412097309
 GameObject:
   m_ObjectHideFlags: 0
@@ -6503,6 +6562,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4964012448688786, guid: 408f59ce148892a4480e8987e8a029b1, type: 3}
   m_PrefabInstance: {fileID: 1600721984}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2064587898 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8344315865539524999, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+  m_PrefabInstance: {fileID: 220644671}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2099628670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6963,7 +7027,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1759573765007076304, guid: 3e83379d01c8e7843b2ef585ce04b4a8, type: 3}
       propertyPath: jumpForce
-      value: 7000
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1759573765007076311, guid: 3e83379d01c8e7843b2ef585ce04b4a8, type: 3}
       propertyPath: m_RootOrder
