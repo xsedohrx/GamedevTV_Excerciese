@@ -15,29 +15,37 @@ public class Teleport : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] Light areaLight;
     [SerializeField] Light mainWorldLight;
-    
+
     [Tooltip("How long to wait before allowing another teleportation.")]
     [SerializeField] float cooldownTime = 3f;
 
-    void Start() 
+    void Start()
     {
         // CHALLENGE TIP: Make sure all relevant lights are turned off until you need them on
         // because, you know, that would look cool.
     }
 
-    void OnTriggerEnter(Collider other) 
+    void OnTriggerEnter(Collider other)
     {
         if (isCoolingDown == true)
         {
             return;
         }
-        TeleportPlayer(other,player,teleportTarget);
+
+        Teleport destinationScript = teleportTarget.GetComponent<Teleport>();
+        if (destinationScript != null)
+        {
+            destinationScript.StartCooldown();
+        }
+        TeleportPlayer(other, player, teleportTarget);
+        StartCooldown();
+
         // Challenge 3: DeactivateObject();
         // Challenge 4: IlluminateArea();
         // Challenge 5: StartCoroutine ("BlinkWorldLight");
         // Challenge 6: TeleportPlayerRandom();
     }
-    
+
 
 
     // Public method so other teleporters can trigger this one's cooldown
@@ -56,9 +64,10 @@ public class Teleport : MonoBehaviour
 
         isCoolingDown = false;
     }
+
     void TeleportPlayer(Collider other, GameObject player, Transform teleportTarget)
     {
-        
+
 
         // when player collides with teleportA (after standing on it for 3 seconds),
         // spawn at teleportB
@@ -70,17 +79,17 @@ public class Teleport : MonoBehaviour
     }
     void DeactivateObject()
     {
-       // If player spawns on teleporter, deactivate until collision = false
+        // If player spawns on teleporter, deactivate until collision = false
     }
 
     void IlluminateArea()
     {
-       // code goes here 
+        // code goes here 
     }
 
     // IEnumerator BlinkWorldLight()
     // {
-            // code goes here
+    // code goes here
     // }
 
     void TeleportPlayerRandom()
